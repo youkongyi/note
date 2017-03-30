@@ -1,0 +1,4 @@
+<beans>
+	<bean id = "tc2" class="cn.tedu.test.TestCase2"/>
+	<bean id = "date" class = "java.util.Date"/>
+</beans>

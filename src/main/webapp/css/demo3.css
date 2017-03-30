@@ -1,0 +1,49 @@
+﻿* {
+	padding:0;
+	margin: 0px auto;
+	border: 0;
+}
+body {
+	/* overflow属性规定当内容溢出元素框时发生的事情。 */
+	overflow:hidden;
+	text-align:center;
+	font-size: 18px;
+}
+div {
+	width: 860px;
+	height: 800px;
+	/* 相对定位 */
+	position:relative;
+	border: 1px solid red;
+	
+}
+.img {
+	margin-left:auto;
+	margin-right:auto;
+	width: 400px;
+	height: 400px;
+	display:block;
+	/* 浮动 */
+	float: right;
+}
+#a {
+	/* 绝对定位 */
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+#b {
+	position: absolute;
+	left: 410px;
+	top: 10px;
+}
+#c {
+	position: absolute;
+	top: 360px;
+	left: 50px;
+}
+#d {
+	position: absolute;
+	left: 410px;
+	top: 360px;
+}
