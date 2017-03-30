@@ -95,14 +95,11 @@ function checkFinalPassword() {
 }
 
 function loginAction() {
-	console.log('login click!');
 	// 收集用户名和密码数据
 	var name = $('#count').val();
-	
 	var password = $('#password').val();
 	// 验证用户名和密码
 	var pass = checkName() + checkPassWord();
-	
 	if (pass != 2) {
 		return;
 	}

@@ -21,8 +21,7 @@ public class UserServiceImpl implements UserService {
 	
 	@Transactional
 	public User login(String name, String password) throws UserNameException, PasswordException {
-		System.out.println("login ");
-			//检验输入参数的合理性
+		//检验输入参数的合理性
 			String reg = "^\\w{3,10}$";
 		if(name==null||name.trim().isEmpty()){
 			throw new UserNameException("帐号不能为空");
@@ -41,14 +40,12 @@ public class UserServiceImpl implements UserService {
 		
 		//查询用户数据 
 		User user = userDAO.findUserByName(name);
-		
 		if(user == null){
 			throw new UserNameException("用户名错误");
 		}
 		
 		//对照密文
 		String md5 = Utils.crypt(password);
-//		System.out.println(md5);
 		if(user.getPassword().equals(md5)){
 			//登录成功,返回用户信息
 			String token = UUID.randomUUID().toString();
