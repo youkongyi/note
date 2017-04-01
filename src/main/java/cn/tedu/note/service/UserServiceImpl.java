@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Transactional
-	public User regist(String name, String nick, String password, String confirm)
+	public User regist(String name, String nick, String password, String confirm,String qq)
 			throws UserNameException, PasswordException {
 		
 		if(name==null||name.trim().isEmpty()){
@@ -98,7 +98,7 @@ public class UserServiceImpl implements UserService {
 		String token = "";
 		//UUID 用于生产永远不重复的ID
 		String id = UUID.randomUUID().toString();
-		User user = new User(id,name,pwd,token,nick);
+		User user = new User(id,name,pwd,token,nick,qq);
 		userDAO.saveUser(user);
 		return user;
 	}

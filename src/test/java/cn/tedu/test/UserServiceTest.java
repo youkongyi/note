@@ -48,7 +48,7 @@ public class UserServiceTest {
 	@Test
 	public void testRegistUser(){
 		UserService ser = ctx.getBean("userService",UserService.class);
-		User user = ser.regist("Jerry", "Mouse", "123", "123");
+		User user = ser.regist("Jerry", "Mouse", "123", "123","");
 		System.out.println(user);
 	}
 	

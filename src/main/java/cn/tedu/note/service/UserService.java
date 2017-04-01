@@ -12,7 +12,7 @@ public interface UserService {
 	 * 
 	 * @throws PasswordException 密码不一致
 	 */
-	User regist(String name,String nick,String password,String confirm)throws UserNameException,PasswordException;
+	User regist(String name,String nick,String password,String confirm,String qq)throws UserNameException,PasswordException;
 
 	boolean checkToken(String userId, String token);
 	

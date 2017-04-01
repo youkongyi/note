@@ -38,8 +38,8 @@ public class UserController extends AbstractController{
 	
 	@RequestMapping("/regist.do")
 	@ResponseBody
-	public JsonResult<User> regist(String name,String nick,String password,String confirm){
-			User user = userService.regist(name, nick, password, confirm);
+	public JsonResult<User> regist(String name,String nick,String password,String confirm,String qq){
+			User user = userService.regist(name, nick, password, confirm,qq);
 			return new JsonResult<User>(user);
 	}
 	

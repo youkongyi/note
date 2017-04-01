@@ -39,7 +39,7 @@ public class MyBatisTestCase {
 	@Test
 	public void test4(){
 		UserDAO dao = ctx.getBean("userDAO",UserDAO.class);
-		dao.saveUser(new User("123","Tom","123","","Cat"));
+		dao.saveUser(new User("123","Tom","123","","Cat",""));
 		//select * from cn_user 
 		//where cn_user_id= '123'
 	}

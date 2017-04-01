@@ -10,19 +10,29 @@ public class User implements Serializable {
 	private String password;
 	private String token;
 	private String nick;
+	private String qq;
+	
 
-	public User() {
+    public User() {
 	}
 
-	public User(String id, String name, String password, String token, String nick) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.password = password;
-		this.token = token;
-		this.nick = nick;
-	}
+    public User(String id, String name, String password, String token, String nick, String qq) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.token = token;
+        this.nick = nick;
+        this.qq = qq;
+    }
 
+
+    public String getQq() {
+	    return qq;
+	}
+	public void setQq(String qq) {
+	    this.qq = qq;
+	}
 	public String getId() {
 		return id;
 	}

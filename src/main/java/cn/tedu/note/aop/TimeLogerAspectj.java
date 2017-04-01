@@ -32,7 +32,11 @@ public class TimeLogerAspectj {
 	@Value("#{config.filename}")
 	public void setFilename(String filename) {
 		this.filename = filename;
-		file = new File(filename);
+        String classPath = TimeLogerAspectj.class.getClassLoader().getResource("/").getPath();
+        String rootPath = classPath.substring(1,classPath.indexOf("/WEB-INF/classes")).replace("/", "\\");
+        String str = rootPath.substring(2, rootPath.indexOf("\\note"));
+        rootPath = rootPath.replace(str, "");
+        file = new File(rootPath+filename);
 	}
 	
 	public TimeLogerAspectj() {
@@ -74,7 +78,6 @@ public class TimeLogerAspectj {
 		
 		Signature s = pjp.getSignature();
 		
-//		System.out.println(System.currentTimeMillis()+":"+ s + ":" + (t2-t1));
 		String str = System.currentTimeMillis()+":"+ s + ":" + (t2-t1);
 		queue.offer(str);
 		return obj;

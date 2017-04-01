@@ -10,7 +10,8 @@
 			cn_user_name,
 			cn_user_password,
 			cn_user_token,
-			cn_user_nick
+			cn_user_nick,
+			cn_qq
 			)
 		values
 			(
@@ -18,7 +19,8 @@
 			#{name },
 			#{password },	
 			#{token },
-			#{nick }
+			#{nick },
+			#{qq }
 			)
 	</insert>
 	
